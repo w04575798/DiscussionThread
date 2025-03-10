@@ -17,14 +17,13 @@ namespace DiscussionThread.Models
         [Required]
         public string Content { get; set; }
 
-        public string? ImageFilename { get; set; } // Stores the filename
+        public string? ImageFilename { get; set; }
 
-        [NotMapped] // Prevents this property from being stored in the database
-        public IFormFile ImageFile { get; set; }
+        [NotMapped]
+        public IFormFile? ImageFile { get; set; }
 
         public DateTime CreateDate { get; set; } = DateTime.Now;
 
-        // Navigation Property
         public List<Comment> Comments { get; set; } = new List<Comment>();
     }
 }

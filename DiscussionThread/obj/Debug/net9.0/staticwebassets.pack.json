@@ -257,6 +257,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
+      "Id": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\uploads\\b4e42ecb-9931-4fc9-b857-2b13ab489c7b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b4e42ecb-9931-4fc9-b857-2b13ab489c7b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\uploads\\wolfimage.jpg",
+      "PackagePath": "staticwebassets\\uploads\\wolfimage.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.DiscussionThread.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

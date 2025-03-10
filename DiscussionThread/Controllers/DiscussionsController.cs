@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -42,81 +41,84 @@ namespace DiscussionThread.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DiscussionId,Title,Content,ImageFilename,CreateDate")] Discussion discussion, IFormFile image)
+        public async Task<IActionResult> Create(Discussion discussion)
         {
-            if (ModelState.IsValid)
+            // Handle image upload if provided
+            if (discussion.ImageFile != null && discussion.ImageFile.Length > 0)
             {
-                if (image != null && image.Length > 0)
+                string uploadDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+                Directory.CreateDirectory(uploadDir);
+
+                string fileName = Guid.NewGuid() + Path.GetExtension(discussion.ImageFile.FileName);
+                string filePath = Path.Combine(uploadDir, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
                 {
-                    var fileName = Path.GetFileName(Guid.NewGuid() + Path.GetExtension(image.FileName));
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", fileName);
-
-                    Directory.CreateDirectory(Path.GetDirectoryName(filePath)); // Ensure directory exists
-
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await image.CopyToAsync(stream);
-                    }
-
-                    discussion.ImageFilename = fileName;
-                }
-                else
-                {
-                    discussion.ImageFilename = null;
+                    await discussion.ImageFile.CopyToAsync(stream);
                 }
 
-                discussion.CreateDate = DateTime.Now;
-                _context.Add(discussion);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                discussion.ImageFilename = fileName;
             }
+
+            // Set creation date and save the discussion
+            discussion.CreateDate = DateTime.Now;
+            _context.Add(discussion);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null) return NotFound();
+
+            var discussion = await _context.Discussions.FindAsync(id);
+            if (discussion == null) return NotFound();
+
             return View(discussion);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("DiscussionId,Title,Content,ImageFilename,CreateDate")] Discussion discussion, IFormFile image)
+        public async Task<IActionResult> Edit(int id, Discussion discussion)
         {
             if (id != discussion.DiscussionId) return NotFound();
 
-            if (ModelState.IsValid)
+            try
             {
-                try
+                // Handle image upload if provided
+                if (discussion.ImageFile != null && discussion.ImageFile.Length > 0)
                 {
-                    if (image != null && image.Length > 0)
+                    string uploadDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+                    Directory.CreateDirectory(uploadDir);
+
+                    if (!string.IsNullOrEmpty(discussion.ImageFilename))
                     {
-                        // Delete the old image file if it exists
-                        if (!string.IsNullOrEmpty(discussion.ImageFilename))
-                        {
-                            var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", discussion.ImageFilename);
-                            if (System.IO.File.Exists(oldImagePath))
-                            {
-                                System.IO.File.Delete(oldImagePath);
-                            }
-                        }
-
-                        var fileName = Path.GetFileName(Guid.NewGuid() + Path.GetExtension(image.FileName));
-                        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", fileName);
-
-                        using (var stream = new FileStream(filePath, FileMode.Create))
-                        {
-                            await image.CopyToAsync(stream);
-                        }
-
-                        discussion.ImageFilename = fileName;
+                        string oldFilePath = Path.Combine(uploadDir, discussion.ImageFilename);
+                        if (System.IO.File.Exists(oldFilePath)) System.IO.File.Delete(oldFilePath);
                     }
 
-                    _context.Update(discussion);
-                    await _context.SaveChangesAsync();
+                    string fileName = Guid.NewGuid() + Path.GetExtension(discussion.ImageFile.FileName);
+                    string filePath = Path.Combine(uploadDir, fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await discussion.ImageFile.CopyToAsync(stream);
+                    }
+
+                    discussion.ImageFilename = fileName;
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!DiscussionExists(discussion.DiscussionId)) return NotFound();
-                    else throw;
-                }
-                return RedirectToAction(nameof(Index));
+
+                // Update the discussion
+                _context.Update(discussion);
+                await _context.SaveChangesAsync();
             }
-            return View(discussion);
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!DiscussionExists(discussion.DiscussionId)) return NotFound();
+                else throw;
+            }
+            return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> Delete(int? id)
@@ -136,19 +138,20 @@ namespace DiscussionThread.Controllers
             var discussion = await _context.Discussions.FindAsync(id);
             if (discussion != null)
             {
-                // Delete the image file from wwwroot/uploads
+                string uploadDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+
+                // Delete the image if it exists
                 if (!string.IsNullOrEmpty(discussion.ImageFilename))
                 {
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", discussion.ImageFilename);
-                    if (System.IO.File.Exists(filePath))
-                    {
-                        System.IO.File.Delete(filePath);
-                    }
+                    string filePath = Path.Combine(uploadDir, discussion.ImageFilename);
+                    if (System.IO.File.Exists(filePath)) System.IO.File.Delete(filePath);
                 }
 
+                // Remove the discussion
                 _context.Discussions.Remove(discussion);
                 await _context.SaveChangesAsync();
             }
+
             return RedirectToAction(nameof(Index));
         }
 

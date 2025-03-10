@@ -1,8 +1,42 @@
-﻿@{
+﻿@model IEnumerable<DiscussionThread.Models.Discussion>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>Welcome to the Discussion Forum</h1>
+    <p>Browse and participate in various discussions</p>
 </div>
+
+<!-- Create Discussion Button -->
+<div class="text-center">
+    <!-- Fix: Link to DiscussionController's Create action -->
+	<a href="/Discussions/Create">Create a Discussion</a>
+</div>
+
+<h2>Discussion Threads</h2>
+
+@foreach (var discussion in Model)
+{
+    <div class="discussion-thread">
+        <!-- Display Image thumbnail if available -->
+        @if (!string.IsNullOrEmpty(discussion.ImageFilename))
+        {
+            <img src="@Url.Content("~/uploads/" + discussion.ImageFilename)" alt="Discussion Image" width="100" />
+        }
+
+        <!-- Display Title as a clickable link to the GetDiscussion page -->
+        <h3>
+            <a asp-action="GetDiscussion" asp-route-id="@discussion.DiscussionId">
+                @discussion.Title
+            </a>
+        </h3>
+
+        <!-- Display the number of comments -->
+        <p>@discussion.Comments.Count() comments</p>
+
+        <!-- Display Create Date in readable format -->
+        <p>Created on: @discussion.CreateDate.ToString("yyyy-MM-dd HH:mm:ss")</p>
+    </div>
+}
