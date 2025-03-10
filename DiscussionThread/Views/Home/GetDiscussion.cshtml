@@ -1,0 +1,14 @@
+﻿@model DiscussionThread.Models.DiscussionViewModel
+
+<h1>@Model.Discussion.Title</h1>
+<p>@Model.Discussion.Content</p>
+
+<h3>Comments</h3>
+<ul>
+    @foreach (var comment in Model.Comments)
+    {
+        <li>@comment.Content - @comment.CreateDate</li>
+    }
+</ul>
+
+<a href="@Url.Action("CreateComment", "Home", new { discussionId = Model.Discussion.DiscussionId })">Add a new comment</a>

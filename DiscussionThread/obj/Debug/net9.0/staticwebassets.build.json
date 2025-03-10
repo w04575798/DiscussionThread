@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dvuqCWkYBB5KxQ+jJnKTEj3z//TJt+vNBzLtxpiV38A=",
+  "Hash": "m7jBks8wVCw+exoplMgb4Ff4+gL9N/ccmxVv1wFOZDU=",
   "Source": "DiscussionThread",
   "BasePath": "_content/DiscussionThread",
   "Mode": "Default",
@@ -1235,12 +1235,12 @@
       "OriginalItemSpec": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\obj\\Debug\\net9.0\\compressed\\xqp1ioy7ye-b9sayid5wm.gz",
+      "Identity": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\obj\\Debug\\net9.0\\compressed\\xqp1ioy7ye-ubqgcz7hny.gz",
       "SourceId": "DiscussionThread",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/DiscussionThread",
-      "RelativePath": "css/site#[.{fingerprint=b9sayid5wm}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=ubqgcz7hny}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1249,8 +1249,8 @@
       "RelatedAsset": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "0suozzrugb",
-      "Integrity": "0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=",
+      "Fingerprint": "kuxm9tm54d",
+      "Integrity": "3DGG87qua0ZthQSpsJQB6SOS5cRJlIO+3yi71F+M16g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\css\\site.css"
@@ -1417,8 +1417,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b9sayid5wm",
-      "Integrity": "j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=",
+      "Fingerprint": "ubqgcz7hny",
+      "Integrity": "SpF+a5no/OoezBFiETpAxjCIrB/Ucxh4XGQGuXzRZG0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2726,6 +2726,27 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\uploads\\28936a99-28fd-4869-b957-54d9a45a48d1.jpg",
+      "SourceId": "DiscussionThread",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\",
+      "BasePath": "_content/DiscussionThread",
+      "RelativePath": "uploads/28936a99-28fd-4869-b957-54d9a45a48d1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u6e4k65kdw",
+      "Integrity": "KiOXBFPZOlT7cycoDBNMXZXzy6M6nLjitCkBjDh3qaw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\28936a99-28fd-4869-b957-54d9a45a48d1.jpg"
+    },
+    {
       "Identity": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\uploads\\b4e42ecb-9931-4fc9-b857-2b13ab489c7b.jpg",
       "SourceId": "DiscussionThread",
       "SourceType": "Discovered",
@@ -2745,6 +2766,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\b4e42ecb-9931-4fc9-b857-2b13ab489c7b.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\uploads\\ff0e5726-b41d-4d85-a178-76e634e8b30c.jpg",
+      "SourceId": "DiscussionThread",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\",
+      "BasePath": "_content/DiscussionThread",
+      "RelativePath": "uploads/ff0e5726-b41d-4d85-a178-76e634e8b30c#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u6e4k65kdw",
+      "Integrity": "KiOXBFPZOlT7cycoDBNMXZXzy6M6nLjitCkBjDh3qaw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ff0e5726-b41d-4d85-a178-76e634e8b30c.jpg"
     },
     {
       "Identity": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\uploads\\wolfimage.jpg",
@@ -2770,13 +2812,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.b9sayid5wm.css",
-      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\obj\\Debug\\net9.0\\compressed\\xqp1ioy7ye-b9sayid5wm.gz",
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\obj\\Debug\\net9.0\\compressed\\xqp1ioy7ye-ubqgcz7hny.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003134796238"
+          "Quality": "0.001275510204"
         }
       ],
       "ResponseHeaders": [
@@ -2786,19 +2828,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "783"
         },
         {
           "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
+          "Value": "\"3DGG87qua0ZthQSpsJQB6SOS5cRJlIO+3yi71F+M16g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Feb 2025 20:44:12 GMT"
+          "Value": "Mon, 10 Mar 2025 19:15:17 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -2814,26 +2856,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "W/\"SpF+a5no/OoezBFiETpAxjCIrB/Ucxh4XGQGuXzRZG0=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "b9sayid5wm"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-SpF+a5no/OoezBFiETpAxjCIrB/Ucxh4XGQGuXzRZG0="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css",
+      "Route": "css/site.css",
       "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2843,7 +2877,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "667"
+          "Value": "2219"
         },
         {
           "Name": "Content-Type",
@@ -2851,11 +2885,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "\"SpF+a5no/OoezBFiETpAxjCIrB/Ucxh4XGQGuXzRZG0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Feb 2025 20:44:12 GMT"
+          "Value": "Mon, 10 Mar 2025 19:15:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SpF+a5no/OoezBFiETpAxjCIrB/Ucxh4XGQGuXzRZG0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\obj\\Debug\\net9.0\\compressed\\xqp1ioy7ye-ubqgcz7hny.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "783"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3DGG87qua0ZthQSpsJQB6SOS5cRJlIO+3yi71F+M16g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 19:15:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3DGG87qua0ZthQSpsJQB6SOS5cRJlIO+3yi71F+M16g="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.ubqgcz7hny.css",
+      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\obj\\Debug\\net9.0\\compressed\\xqp1ioy7ye-ubqgcz7hny.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001275510204"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "783"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3DGG87qua0ZthQSpsJQB6SOS5cRJlIO+3yi71F+M16g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 19:15:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"SpF+a5no/OoezBFiETpAxjCIrB/Ucxh4XGQGuXzRZG0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ubqgcz7hny"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SpF+a5no/OoezBFiETpAxjCIrB/Ucxh4XGQGuXzRZG0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.ubqgcz7hny.css",
+      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2219"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SpF+a5no/OoezBFiETpAxjCIrB/Ucxh4XGQGuXzRZG0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 19:15:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2865,7 +3044,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "ubqgcz7hny"
         },
         {
           "Name": "label",
@@ -2873,13 +3052,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-SpF+a5no/OoezBFiETpAxjCIrB/Ucxh4XGQGuXzRZG0="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css.gz",
-      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\obj\\Debug\\net9.0\\compressed\\xqp1ioy7ye-b9sayid5wm.gz",
+      "Route": "css/site.ubqgcz7hny.css.gz",
+      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\obj\\Debug\\net9.0\\compressed\\xqp1ioy7ye-ubqgcz7hny.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2888,7 +3067,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "783"
         },
         {
           "Name": "Content-Type",
@@ -2896,11 +3075,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
+          "Value": "\"3DGG87qua0ZthQSpsJQB6SOS5cRJlIO+3yi71F+M16g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Feb 2025 20:44:12 GMT"
+          "Value": "Mon, 10 Mar 2025 19:15:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2918,7 +3097,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "ubqgcz7hny"
         },
         {
           "Name": "label",
@@ -2926,144 +3105,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\obj\\Debug\\net9.0\\compressed\\xqp1ioy7ye-b9sayid5wm.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003134796238"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "318"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 14 Feb 2025 20:44:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "667"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 14 Feb 2025 20:44:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\obj\\Debug\\net9.0\\compressed\\xqp1ioy7ye-b9sayid5wm.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "318"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 14 Feb 2025 20:44:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y="
+          "Value": "sha256-3DGG87qua0ZthQSpsJQB6SOS5cRJlIO+3yi71F+M16g="
         }
       ]
     },
@@ -21924,6 +21966,88 @@
       ]
     },
     {
+      "Route": "uploads/28936a99-28fd-4869-b957-54d9a45a48d1.jpg",
+      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\uploads\\28936a99-28fd-4869-b957-54d9a45a48d1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24660"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KiOXBFPZOlT7cycoDBNMXZXzy6M6nLjitCkBjDh3qaw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 19:38:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KiOXBFPZOlT7cycoDBNMXZXzy6M6nLjitCkBjDh3qaw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/28936a99-28fd-4869-b957-54d9a45a48d1.u6e4k65kdw.jpg",
+      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\uploads\\28936a99-28fd-4869-b957-54d9a45a48d1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24660"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KiOXBFPZOlT7cycoDBNMXZXzy6M6nLjitCkBjDh3qaw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 19:38:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u6e4k65kdw"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/28936a99-28fd-4869-b957-54d9a45a48d1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KiOXBFPZOlT7cycoDBNMXZXzy6M6nLjitCkBjDh3qaw="
+        }
+      ]
+    },
+    {
       "Route": "uploads/b4e42ecb-9931-4fc9-b857-2b13ab489c7b.jpg",
       "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\uploads\\b4e42ecb-9931-4fc9-b857-2b13ab489c7b.jpg",
       "Selectors": [],
@@ -21998,6 +22122,88 @@
         {
           "Name": "label",
           "Value": "uploads/b4e42ecb-9931-4fc9-b857-2b13ab489c7b.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KiOXBFPZOlT7cycoDBNMXZXzy6M6nLjitCkBjDh3qaw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ff0e5726-b41d-4d85-a178-76e634e8b30c.jpg",
+      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\uploads\\ff0e5726-b41d-4d85-a178-76e634e8b30c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24660"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KiOXBFPZOlT7cycoDBNMXZXzy6M6nLjitCkBjDh3qaw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 19:37:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KiOXBFPZOlT7cycoDBNMXZXzy6M6nLjitCkBjDh3qaw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ff0e5726-b41d-4d85-a178-76e634e8b30c.u6e4k65kdw.jpg",
+      "AssetFile": "C:\\Users\\oahme\\Desktop\\2025\\trumbull\\DiscussionThread\\DiscussionThread\\wwwroot\\uploads\\ff0e5726-b41d-4d85-a178-76e634e8b30c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24660"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KiOXBFPZOlT7cycoDBNMXZXzy6M6nLjitCkBjDh3qaw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 19:37:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u6e4k65kdw"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/ff0e5726-b41d-4d85-a178-76e634e8b30c.jpg"
         },
         {
           "Name": "integrity",

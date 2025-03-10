@@ -259,7 +259,6 @@ C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug
 C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug\net9.0\scopedcss\bundle\DiscussionThread.styles.css
 C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug\net9.0\scopedcss\projectbundle\DiscussionThread.bundle.scp.css
-C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug\net9.0\compressed\xqp1ioy7ye-b9sayid5wm.gz
 C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug\net9.0\compressed\vsxms0osch-61n19gt1b8.gz
 C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug\net9.0\compressed\ki2azx9eu7-xtxxf3hu2r.gz
 C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug\net9.0\compressed\fo7ka7ek1j-bqjiyaj88i.gz
@@ -339,3 +338,4 @@ C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug
 C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug\net9.0\DiscussionThread.genruntimeconfig.cache
 C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug\net9.0\ref\DiscussionThread.dll
 C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\oahme\Desktop\2025\trumbull\DiscussionThread\DiscussionThread\obj\Debug\net9.0\compressed\xqp1ioy7ye-ubqgcz7hny.gz

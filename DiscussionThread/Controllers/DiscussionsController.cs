@@ -19,26 +19,39 @@ namespace DiscussionThread.Controllers
             _context = context;
         }
 
+        // Index action to show list of discussions
         public async Task<IActionResult> Index()
         {
             return View(await _context.Discussions.ToListAsync());
         }
 
+        // Details action to show a specific discussion with its comments
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return NotFound();
 
-            var discussion = await _context.Discussions.FirstOrDefaultAsync(m => m.DiscussionId == id);
+            var discussion = await _context.Discussions
+                .Include(d => d.Comments) // Include related comments
+                .FirstOrDefaultAsync(m => m.DiscussionId == id);
+
             if (discussion == null) return NotFound();
 
-            return View(discussion);
+            var viewModel = new DiscussionViewModel
+            {
+                Discussion = discussion,
+                Comments = discussion.Comments.ToList()
+            };
+
+            return View(viewModel);
         }
 
+        // Create action to render the form for adding new discussions
         public IActionResult Create()
         {
             return View();
         }
 
+        // Post action to save a new discussion
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Discussion discussion)
@@ -68,6 +81,7 @@ namespace DiscussionThread.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // Edit action to render the form for editing a discussion
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
@@ -78,6 +92,7 @@ namespace DiscussionThread.Controllers
             return View(discussion);
         }
 
+        // Post action to save the edited discussion
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Discussion discussion)
@@ -121,6 +136,7 @@ namespace DiscussionThread.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // Delete action to render the form for deleting a discussion
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
@@ -131,6 +147,7 @@ namespace DiscussionThread.Controllers
             return View(discussion);
         }
 
+        // Post action to confirm deletion of a discussion
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -155,6 +172,7 @@ namespace DiscussionThread.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // Helper method to check if the discussion exists
         private bool DiscussionExists(int id)
         {
             return _context.Discussions.Any(e => e.DiscussionId == id);
