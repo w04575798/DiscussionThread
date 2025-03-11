@@ -11,4 +11,5 @@
     }
 </ul>
 
-<a href="@Url.Action("CreateComment", "Home", new { discussionId = Model.Discussion.DiscussionId })">Add a new comment</a>
+
+<a href="@Url.Action("Create", "Comments", new { discussionId = Model.Discussion.DiscussionId })">Add a new comment</a>

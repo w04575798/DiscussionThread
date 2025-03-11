@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DiscussionThread.Data;
 using DiscussionThread.Models;
@@ -30,22 +29,15 @@ namespace DiscussionThread.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Content, DiscussionId")] Comment comment)
         {
-            if (ModelState.IsValid)
-            {
-                // Set the current date/time for the comment creation
-                comment.CreateDate = DateTime.Now;
+            // Set the current date/time for the comment creation
+            comment.CreateDate = DateTime.Now;
 
-                // Add the comment to the database
-                _context.Add(comment);
-                await _context.SaveChangesAsync();
+            // Add the comment to the database
+            _context.Add(comment);
+            await _context.SaveChangesAsync();
 
-                // Redirect to the discussion details after successfully adding the comment
-                return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId });
-            }
-
-            // If validation fails, return the same view with the current data
-            ViewBag.DiscussionId = comment.DiscussionId;
-            return View(comment);
+            // Redirect to the discussion details after successfully adding the comment
+            return RedirectToAction("GetDiscussion", "Home", new { id = comment.DiscussionId });
         }
     }
 }
