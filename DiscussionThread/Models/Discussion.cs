@@ -25,5 +25,12 @@ namespace DiscussionThread.Models
         public DateTime CreateDate { get; set; } = DateTime.Now;
 
         public List<Comment> Comments { get; set; } = new List<Comment>();
+
+        // Foreign key to ApplicationUser (logged-in user)
+        [Required]
+        public string ApplicationUserId { get; set; }
+
+        [ForeignKey("ApplicationUserId")]
+        public ApplicationUser ApplicationUser { get; set; }
     }
 }

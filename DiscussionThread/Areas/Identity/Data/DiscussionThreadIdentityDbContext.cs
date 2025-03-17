@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using DiscussionThread.Models;
+
 
 namespace DiscussionThread.Areas.Identity.Data;
 

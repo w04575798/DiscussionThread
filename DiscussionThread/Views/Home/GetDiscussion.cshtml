@@ -3,13 +3,31 @@
 <h1>@Model.Discussion.Title</h1>
 <p>@Model.Discussion.Content</p>
 
+<!-- Display Discussion Owner's Profile Picture and Name -->
+<div class="discussion-owner">
+    <img src="@Url.Content("~/uploads/" + Model.Discussion.ApplicationUser.ImageFilename)"
+         alt="Owner Profile Picture" class="profile-thumbnail" />
+    <p>
+        Owner:
+        <a asp-action="Profile" asp-route-id="@Model.Discussion.ApplicationUser.Id">
+            @Model.Discussion.ApplicationUser.Name
+        </a>
+    </p>
+</div>
+
 <h3>Comments</h3>
 <ul>
     @foreach (var comment in Model.Comments)
     {
-        <li>@comment.Content - @comment.CreateDate</li>
+        <li>
+            <img src="@Url.Content("~/uploads/" + comment.ApplicationUser.ImageFilename)"
+                 alt="Comment Owner Picture" class="profile-thumbnail" />
+            <a asp-action="Profile" asp-route-id="@comment.ApplicationUser.Id">
+                @comment.ApplicationUser.Name
+            </a>
+            - @comment.Content ( @comment.CreateDate.ToString("yyyy-MM-dd HH:mm:ss") )
+        </li>
     }
 </ul>
-
 
 <a href="@Url.Action("Create", "Comments", new { discussionId = Model.Discussion.DiscussionId })">Add a new comment</a>

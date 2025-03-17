@@ -1,0 +1,39 @@
+﻿@page
+@using DiscussionThread.Models
+@model DiscussionThread.Areas.Identity.Pages.Account.Manage.ManageProfileModel
+@{
+    ViewData["Title"] = "Manage Profile";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="UserProfile.Name"></label>
+        <input asp-for="UserProfile.Name" class="form-control" />
+        <span asp-validation-for="UserProfile.Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="UserProfile.Location"></label>
+        <input asp-for="UserProfile.Location" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="ImageFile">Profile Picture</label>
+        <input id="ImageFile" name="ImageFile" type="file" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        @if (!string.IsNullOrEmpty(Model.UserProfile.ImageFilename))
+        {
+            <img src="~/uploads/@Model.UserProfile.ImageFilename" alt="Profile Image" style="max-width: 150px; max-height: 150px;" />
+        }
+        else
+        {
+            <img src="~/images/default-avatar.png" alt="Default Profile Image" style="max-width: 150px; max-height: 150px;" />
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

@@ -1,6 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@using DiscussionThread.Models
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
 
 <ul class="navbar-nav">
     @if (SignInManager.IsSignedIn(User))
@@ -9,7 +10,7 @@
             <a class="nav-link text-dark" asp-controller="Threads" asp-action="MyThreads">My Threads</a>
         </li>
         <li class="nav-item">
-            <form class="form-inline" asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" method="post">
                 <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
             </form>
         </li>

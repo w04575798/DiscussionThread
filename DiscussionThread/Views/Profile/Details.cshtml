@@ -1,0 +1,20 @@
+﻿@model DiscussionThread.Models.ProfileViewModel
+
+<h2>@Model.User.Name's Profile</h2>
+
+<!-- Display User's Profile Picture -->
+<img src="@Url.Content("~/uploads/" + Model.User.ImageFilename)" alt="Profile Picture" width="100" height="100" />
+
+<p><strong>Location:</strong> @Model.User.Location</p>
+
+<h3>Discussions by @Model.User.Name</h3>
+<ul>
+    @foreach (var discussion in Model.Discussions)
+    {
+        <li>
+            <a href="@Url.Action("GetDiscussion", "Home", new { id = discussion.DiscussionId })">
+                @discussion.Title
+            </a>
+        </li>
+    }
+</ul>

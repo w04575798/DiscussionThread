@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DiscussionThread.Data;
 using Microsoft.Extensions.Logging;
+using System.Linq;
+using DiscussionThread.Models;
+
 
 namespace DiscussionThread.Controllers
 {
@@ -20,8 +23,10 @@ namespace DiscussionThread.Controllers
 
         public IActionResult Index()
         {
+            // Retrieve discussions along with associated comments and user
             var discussions = _context.Discussions
                                       .Include(d => d.Comments)
+                                      .Include(d => d.ApplicationUser)  // Include the ApplicationUser
                                       .OrderByDescending(d => d.CreateDate)
                                       .ToList();
 
@@ -32,11 +37,32 @@ namespace DiscussionThread.Controllers
         {
             var discussion = _context.Discussions
                                      .Include(d => d.Comments)
+                                     .Include(d => d.ApplicationUser)  // Include the ApplicationUser
                                      .FirstOrDefault(d => d.DiscussionId == id);
 
             return discussion == null
                 ? NotFound()
                 : View(new DiscussionViewModel { Discussion = discussion, Comments = discussion.Comments.ToList() });
+        }
+
+        public IActionResult Profile(string id)
+        {
+            var user = _context.Users
+                               .Include(u => u.Discussions)  // Include related discussions
+                               .FirstOrDefault(u => u.Id == id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var viewModel = new ProfileViewModel
+            {
+                User = user,
+                Discussions = user.Discussions.ToList()  // Convert ICollection to List
+            };
+
+            return View("~/Views/Profile/Index.cshtml", viewModel);  // Custom view for profile
         }
 
         public IActionResult Privacy() => View();

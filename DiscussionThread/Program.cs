@@ -1,7 +1,9 @@
-using DiscussionThread.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using DiscussionThread.Areas.Identity.Data;
+using DiscussionThread.Data;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using DiscussionThread.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,9 +16,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection"),
         sqlOptions => sqlOptions.EnableRetryOnFailure()));
 
-// Add Identity services
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
-    .AddEntityFrameworkStores<ApplicationDbContext>(); // This links Identity with ApplicationDbContext
+// Add default Identity system with application user
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
+
+// Register the EmailSender service
+builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
 // Add Razor Pages (needed for Identity UI)
 builder.Services.AddRazorPages();
@@ -34,14 +40,14 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-// Enable authentication and authorization
+// Enable authentication and authorization only once
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Map default controller route
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 // Map Razor Pages for Identity UI
 app.MapRazorPages();

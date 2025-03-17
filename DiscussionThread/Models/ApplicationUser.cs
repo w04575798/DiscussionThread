@@ -2,15 +2,16 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class ApplicationUser : IdentityUser
+namespace DiscussionThread.Models
 {
-    [Required]
-    public string Name { get; set; }
+    public class ApplicationUser : IdentityUser
+    {
+        // Custom properties for  ApplicationUser
+        public string Name { get; set; }
+        public string? Location { get; set; } = "Unknown";
+        public string ImageFilename { get; set; } = "default.png";
 
-    public string Location { get; set; }
-
-    public string ImageFilename { get; set; }
-
-    [NotMapped]
-    public IFormFile ImageFile { get; set; }
+        // Navigation property for related discussions
+        public virtual ICollection<Discussion> Discussions { get; set; } = new List<Discussion>();
+    }
 }

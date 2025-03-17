@@ -1,11 +1,12 @@
-﻿<div class="text-center">
+﻿@model IEnumerable<DiscussionThread.Models.Discussion>
+
+<div class="text-center">
     <h1>Welcome to the Discussion Forum</h1>
     <p>Browse and participate in various discussions</p>
 </div>
 
-<!-- Create Discussion Button -->
 <div class="text-center">
-    <a href="/Discussions/Create" class="create-discussion-btn">Create a Thread</a>
+    <a href="@Url.Action("Create", "Discussions")" class="create-discussion-btn">Create a Thread</a>
 </div>
 
 <h2>Discussion Threads</h2>
@@ -19,12 +20,18 @@
         }
         <div>
             <h3>
-                <a asp-action="GetDiscussion" asp-route-id="@discussion.DiscussionId">
+                <a asp-action="GetDiscussion" asp-controller="Home" asp-route-id="@discussion.DiscussionId">
                     @discussion.Title
                 </a>
             </h3>
-            <p>@discussion.Comments.Count comments</p> <!-- Fixed here -->
+            <p>@discussion.Comments.Count comments</p>
             <p>Created on: @discussion.CreateDate.ToString("yyyy-MM-dd HH:mm:ss")</p>
+            <p>
+                Owner:
+                <a asp-action="Profile" asp-controller="Home" asp-route-id="@discussion.ApplicationUser.Id">
+                    @discussion.ApplicationUser.Name
+                </a>
+            </p>
         </div>
     </div>
 }

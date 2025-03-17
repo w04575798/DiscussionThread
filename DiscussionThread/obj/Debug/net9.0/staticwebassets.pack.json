@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\images\\23df384f-a933-47a4-aaa6-26499b3e5d6d_a2.PNG",
+      "PackagePath": "staticwebassets\\images\\23df384f-a933-47a4-aaa6-26499b3e5d6d_a2.PNG"
+    },
+    {
+      "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\images\\d0d8546d-6c78-4d38-857f-577d0b55e9a2_a2.PNG",
+      "PackagePath": "staticwebassets\\images\\d0d8546d-6c78-4d38-857f-577d0b55e9a2_a2.PNG"
+    },
+    {
       "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -267,6 +275,10 @@
     {
       "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\uploads\\b4e42ecb-9931-4fc9-b857-2b13ab489c7b.jpg",
       "PackagePath": "staticwebassets\\uploads\\b4e42ecb-9931-4fc9-b857-2b13ab489c7b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\uploads\\default.png",
+      "PackagePath": "staticwebassets\\uploads\\default.png"
     },
     {
       "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\uploads\\ff0e5726-b41d-4d85-a178-76e634e8b30c.jpg",

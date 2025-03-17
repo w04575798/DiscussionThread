@@ -62,6 +62,8 @@ C:\Users\Zubair Ahmed\Desktop\github\trumbull\DiscussionThread\wwwroot\lib\boots
 C:\Users\Zubair Ahmed\Desktop\github\trumbull\DiscussionThread\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\23df384f-a933-47a4-aaa6-26499b3e5d6d_a2.PNG
+wwwroot\images\d0d8546d-6c78-4d38-857f-577d0b55e9a2_a2.PNG
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
@@ -126,6 +128,7 @@ wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\uploads\28936a99-28fd-4869-b957-54d9a45a48d1.jpg
 wwwroot\uploads\8dba97a0-4866-4547-bace-ed9f3b75f4a4.png
 wwwroot\uploads\b4e42ecb-9931-4fc9-b857-2b13ab489c7b.jpg
+wwwroot\uploads\default.png
 wwwroot\uploads\ff0e5726-b41d-4d85-a178-76e634e8b30c.jpg
 wwwroot\uploads\logo.png
 wwwroot\uploads\wolfimage.jpg
