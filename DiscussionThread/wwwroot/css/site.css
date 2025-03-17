@@ -1,19 +1,25 @@
-html {
-    position: relative;
-    min-height: 100%;
+/* General Styling for the Page */
+html, body {
+    height: 100%; /* Ensure the body fills the full height of the page */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f6f7f8;
+    color: #1c1c1c;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f6f7f8; /* Lighter background */
-    color: #1c1c1c;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 100px; /* Ensure there’s enough space at the bottom */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px; /* Keep padding for the footer */
+}
+
+.main-content {
+    flex: 1; /* This makes sure the main content section grows to fill the available space */
 }
 
 footer {
-    margin-top: auto; /* Push footer to the bottom */
+    margin-top: auto; /* Push the footer to the bottom of the page */
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #fff;
@@ -24,13 +30,9 @@ footer {
         text-align: center;
     }
 
-.text-center h1 {
-    color: #0079d3; /* Reddit-like blue */
-}
-
 /* Button Styling */
 .create-discussion-btn {
-    background-color: #ff4500; /* Reddit's orange */
+    background-color: #ff4500;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -45,75 +47,79 @@ footer {
         background-color: #e03e00;
     }
 
-/* Cards for threads */
-.thread-card {
-    background-color: #fff;
+/* Card Styling for Discussion Threads and Comments */
+.card {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Profile Picture Styling (Circular) */
+.profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Ensures the image covers the space */
+    margin-right: 15px; /* Space between image and text */
+    border: 2px solid #ddd; /* Optional: Border around the image */
+}
+
+    .profile-thumbnail.card-img-top {
+        width: 60px; /* Larger size for discussion owner */
+        height: 60px; /* Larger size for discussion owner */
+    }
+
+/* Discussion Owner Section */
+.discussion-owner {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
-    .thread-card img {
-        width: 100%; /* Ensure images are the same size */
-        max-height: 250px;
+    .discussion-owner img {
+        margin-right: 15px; /* Space between image and name */
+    }
+
+/* Comments Section */
+.comment-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+}
+
+    .comment-card img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
         object-fit: cover;
-        margin-bottom: 10px;
-        border-radius: 5px;
+        margin-right: 10px;
     }
 
-    .thread-card .thread-header {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
+    .comment-card a {
         font-size: 14px;
-        color: #888;
-        margin-bottom: 10px;
+        color: #007bff;
+        text-decoration: none;
     }
 
-    .thread-card .thread-content {
-        font-size: 16px;
+        .comment-card a:hover {
+            text-decoration: underline;
+        }
+
+    /* Add some styling for comment content */
+    .comment-card p {
+        margin: 0;
+        font-size: 14px;
         color: #333;
-        margin-bottom: 10px;
     }
-
-/* Make sure posts are aligned well */
-.discussion-thread {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-    .discussion-thread img {
-        margin-bottom: 10px;
-    }
-
-@media (max-width: 1024px) {
-    /* On medium screens, adjust layout to two columns */
-    .discussion-thread {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    /* On smaller screens, display posts in a single column */
-    .discussion-thread {
-        grid-template-columns: 1fr;
-    }
-
-    body {
-        padding-bottom: 120px; /* Ensure footer won't overlap on small screens */
-    }
-}
-
-@media (max-width: 600px) {
-    /* For very small screens, increase padding on body */
-    body {
-        padding: 0 15px;
-    }
-}

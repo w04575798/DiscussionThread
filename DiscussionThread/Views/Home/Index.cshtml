@@ -2,36 +2,38 @@
 
 <div class="text-center">
     <h1>Welcome to the Discussion Forum</h1>
-    <p>Browse and participate in various discussions</p>
+    <h1>Dive Into Anything!</h1>
 </div>
 
+<!-- Button to create a new discussion thread -->
 <div class="text-center">
-    <a href="@Url.Action("Create", "Discussions")" class="create-discussion-btn">Create a Thread</a>
+    <a href="@Url.Action("Create", "Discussions")" class="create-discussion-btn btn btn-danger">Create a Thread</a>
 </div>
 
-<h2>Discussion Threads</h2>
+<div class="discussion-thread-list">
+    @foreach (var discussion in Model)
+    {
+        <div class="discussion-thread card">
+            @if (!string.IsNullOrEmpty(discussion.ImageFilename))
+            {
+                <img src="@Url.Content("~/uploads/" + discussion.ImageFilename)" alt="Discussion Image" class="discussion-image card-img-top" />
+            }
 
-@foreach (var discussion in Model)
-{
-    <div class="discussion-thread">
-        @if (!string.IsNullOrEmpty(discussion.ImageFilename))
-        {
-            <img src="@Url.Content("~/uploads/" + discussion.ImageFilename)" alt="Discussion Image" />
-        }
-        <div>
-            <h3>
-                <a asp-action="GetDiscussion" asp-controller="Home" asp-route-id="@discussion.DiscussionId">
-                    @discussion.Title
-                </a>
-            </h3>
-            <p>@discussion.Comments.Count comments</p>
-            <p>Created on: @discussion.CreateDate.ToString("yyyy-MM-dd HH:mm:ss")</p>
-            <p>
-                Owner:
-                <a asp-action="Profile" asp-controller="Home" asp-route-id="@discussion.ApplicationUser.Id">
-                    @discussion.ApplicationUser.Name
-                </a>
-            </p>
+            <div class="card-body">
+                <h3>
+                    <a asp-action="GetDiscussion" asp-controller="Home" asp-route-id="@discussion.DiscussionId">
+                        @discussion.Title
+                    </a>
+                </h3>
+                <p>@discussion.Comments.Count comments</p>
+                <p>Created on: @discussion.CreateDate.ToString("yyyy-MM-dd HH:mm:ss")</p>
+                <p>
+                    Owner:
+                    <a asp-action="Profile" asp-controller="Users" asp-route-id="@discussion.ApplicationUser.Id">
+                        @discussion.ApplicationUser.Name
+                    </a>
+                </p>
+            </div>
         </div>
-    </div>
-}
+    }
+</div>

@@ -34,21 +34,21 @@ namespace DiscussionThread.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Content, DiscussionId")] Comment comment)
         {
-            if (!ModelState.IsValid)
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
             {
-                return View(comment);
+                return RedirectToAction("Login", "Account"); // Redirect to login page if user is not logged in
             }
 
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null) return Unauthorized();
-
-            comment.ApplicationUserId = user.Id; // Assign logged-in user
+            // Assign user information and other properties
+            comment.ApplicationUserId = user.Id;
             comment.CreateDate = DateTime.Now;
 
             _context.Comments.Add(comment);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId });
+            // Redirect to GetDiscussion action in HomeController
+            return RedirectToAction("GetDiscussion", "Home", new { id = comment.DiscussionId });
         }
     }
 }

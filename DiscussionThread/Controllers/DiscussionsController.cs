@@ -23,7 +23,15 @@ namespace DiscussionThread.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Discussions.ToListAsync());
+            // Get the logged-in user's ID
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            // Get discussions only belonging to the logged-in user
+            var userDiscussions = await _context.Discussions
+                                                 .Where(d => d.ApplicationUserId == userId)
+                                                 .ToListAsync();
+
+            return View(userDiscussions);
         }
 
         public async Task<IActionResult> Details(int? id)
@@ -54,11 +62,11 @@ namespace DiscussionThread.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Discussion discussion)
         {
-            // Assuming model is valid, no need to check ModelState.IsValid
-
+            // Assign the logged-in user's ID to the discussion
             discussion.ApplicationUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             discussion.CreateDate = DateTime.Now;
 
+            // Handle image upload
             if (discussion.ImageFile != null && discussion.ImageFile.Length > 0)
             {
                 string uploadDir = Path.Combine("wwwroot", "uploads");
@@ -104,11 +112,13 @@ namespace DiscussionThread.Controllers
             existingDiscussion.Title = discussion.Title;
             existingDiscussion.Content = discussion.Content;
 
+            // Handle image update
             if (discussion.ImageFile != null && discussion.ImageFile.Length > 0)
             {
                 string uploadDir = Path.Combine("wwwroot", "uploads");
                 Directory.CreateDirectory(uploadDir);
 
+                // Delete old image if it exists
                 if (!string.IsNullOrEmpty(existingDiscussion.ImageFilename))
                 {
                     string oldFilePath = Path.Combine(uploadDir, existingDiscussion.ImageFilename);
@@ -150,6 +160,7 @@ namespace DiscussionThread.Controllers
             if (discussion == null || discussion.ApplicationUserId != User.FindFirstValue(ClaimTypes.NameIdentifier))
                 return Forbid();
 
+            // Delete image if exists
             if (!string.IsNullOrEmpty(discussion.ImageFilename))
             {
                 string filePath = Path.Combine("wwwroot", "uploads", discussion.ImageFilename);

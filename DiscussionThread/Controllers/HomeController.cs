@@ -5,8 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using DiscussionThread.Data;
 using Microsoft.Extensions.Logging;
 using System.Linq;
-using DiscussionThread.Models;
-
 
 namespace DiscussionThread.Controllers
 {
@@ -26,7 +24,8 @@ namespace DiscussionThread.Controllers
             // Retrieve discussions along with associated comments and user
             var discussions = _context.Discussions
                                       .Include(d => d.Comments)
-                                      .Include(d => d.ApplicationUser)  // Include the ApplicationUser
+                                      .ThenInclude(c => c.ApplicationUser)  // Include ApplicationUser for each comment
+                                      .Include(d => d.ApplicationUser)  // Include the ApplicationUser for the discussion
                                       .OrderByDescending(d => d.CreateDate)
                                       .ToList();
 
@@ -37,12 +36,22 @@ namespace DiscussionThread.Controllers
         {
             var discussion = _context.Discussions
                                      .Include(d => d.Comments)
-                                     .Include(d => d.ApplicationUser)  // Include the ApplicationUser
+                                     .ThenInclude(c => c.ApplicationUser)  // Ensure each comment has its ApplicationUser loaded
+                                     .Include(d => d.ApplicationUser)  // Ensure the discussion has its ApplicationUser loaded
                                      .FirstOrDefault(d => d.DiscussionId == id);
 
-            return discussion == null
-                ? NotFound()
-                : View(new DiscussionViewModel { Discussion = discussion, Comments = discussion.Comments.ToList() });
+            // Check if the discussion was found
+            if (discussion == null)
+            {
+                return NotFound();  // Return 404 if the discussion is not found
+            }
+
+            // Return the view with the discussion and its comments
+            return View(new DiscussionViewModel
+            {
+                Discussion = discussion,
+                Comments = discussion.Comments?.ToList() ?? new List<Comment>()  // Ensure Comments is not null
+            });
         }
 
         public IActionResult Profile(string id)
@@ -53,7 +62,7 @@ namespace DiscussionThread.Controllers
 
             if (user == null)
             {
-                return NotFound();
+                return NotFound();  // Return 404 if the user is not found
             }
 
             var viewModel = new ProfileViewModel

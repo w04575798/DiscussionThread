@@ -775,5 +775,8 @@ C:\Users\Zubair Ahmed\Desktop\github\trumbull\DiscussionThread\obj\Debug\net9.0\
 C:\Users\Zubair Ahmed\Desktop\github\trumbull\DiscussionThread\obj\Debug\net9.0\ref\DiscussionThread.dll
 C:\Users\Zubair Ahmed\Desktop\github\trumbull\DiscussionThread\obj\Debug\net9.0\compressed\r2ewhtggjl-n1wygrc8yn.gz
 C:\Users\Zubair Ahmed\Desktop\github\trumbull\DiscussionThread\obj\Debug\net9.0\compressed\61h33c7eo4-n1wygrc8yn.gz
-C:\Users\Zubair Ahmed\Desktop\github\trumbull\DiscussionThread\obj\Debug\net9.0\compressed\xqp1ioy7ye-dtfm6o8ock.gz
 C:\Users\Zubair Ahmed\Desktop\github\trumbull\DiscussionThread\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Zubair Ahmed\Desktop\github\trumbull\DiscussionThread\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+C:\Users\Zubair Ahmed\Desktop\github\trumbull\DiscussionThread\bin\Debug\net9.0\MailKit.dll
+C:\Users\Zubair Ahmed\Desktop\github\trumbull\DiscussionThread\bin\Debug\net9.0\MimeKit.dll
+C:\Users\Zubair Ahmed\Desktop\github\trumbull\DiscussionThread\obj\Debug\net9.0\compressed\xqp1ioy7ye-e38j3b9484.gz

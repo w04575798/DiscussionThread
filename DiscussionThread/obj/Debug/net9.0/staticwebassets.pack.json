@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\images\\23df384f-a933-47a4-aaa6-26499b3e5d6d_a2.PNG"
     },
     {
+      "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\images\\363fbc46-401a-4f2c-9bb4-1605dda3db87_900.jpeg",
+      "PackagePath": "staticwebassets\\images\\363fbc46-401a-4f2c-9bb4-1605dda3db87_900.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\images\\88f92226-d589-46bb-8d1a-0d1f811d605f_a2.PNG",
+      "PackagePath": "staticwebassets\\images\\88f92226-d589-46bb-8d1a-0d1f811d605f_a2.PNG"
+    },
+    {
       "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\images\\d0d8546d-6c78-4d38-857f-577d0b55e9a2_a2.PNG",
       "PackagePath": "staticwebassets\\images\\d0d8546d-6c78-4d38-857f-577d0b55e9a2_a2.PNG"
     },
@@ -265,8 +273,16 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
+      "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\uploads\\1c44d804-6aa8-483c-a94e-80d0f5d335aa.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\1c44d804-6aa8-483c-a94e-80d0f5d335aa.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\uploads\\28936a99-28fd-4869-b957-54d9a45a48d1.jpg",
       "PackagePath": "staticwebassets\\uploads\\28936a99-28fd-4869-b957-54d9a45a48d1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\uploads\\3e4ea5dd-6f4d-4565-85f8-e05793dd1c7a.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\3e4ea5dd-6f4d-4565-85f8-e05793dd1c7a.jpeg"
     },
     {
       "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\uploads\\8dba97a0-4866-4547-bace-ed9f3b75f4a4.png",
@@ -281,8 +297,16 @@
       "PackagePath": "staticwebassets\\uploads\\default.png"
     },
     {
+      "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\uploads\\download.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\download.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\uploads\\ff0e5726-b41d-4d85-a178-76e634e8b30c.jpg",
       "PackagePath": "staticwebassets\\uploads\\ff0e5726-b41d-4d85-a178-76e634e8b30c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\uploads\\images.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\images.jpeg"
     },
     {
       "Id": "C:\\Users\\Zubair Ahmed\\Desktop\\github\\trumbull\\DiscussionThread\\wwwroot\\uploads\\logo.png",
